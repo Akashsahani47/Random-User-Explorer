@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState } from 'react'
 import UserCard from '@/components/UserCard'
 import UserDetail from '@/components/UserDetail'
