@@ -9,5 +9,15 @@ This is a Next.js app that fetches 20 random users from an API and displays them
 - Custom CSS
 - Fetch API
 
-## 🖼️ Preview
+
+
+# Clone the repository
+git clone https://github.com/Akashsahani47/Random-User-Explorer.git
+cd Random-User-Explorer
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
 
