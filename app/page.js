@@ -1,8 +1,9 @@
+'use client'
 import { useEffect, useState } from 'react'
 import UserCard from '@/components/UserCard'
 import UserDetail from '@/components/UserDetail'
 
-export default function HomePage() {
+const HomePage = () => {
   const [users, setUsers] = useState([])
   const [selectedUser, setSelectedUser] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -38,3 +39,5 @@ export default function HomePage() {
     </main>
   )
 }
+
+export default HomePage

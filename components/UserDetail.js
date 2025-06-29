@@ -1,4 +1,4 @@
-export default function UserDetail({ user }) {
+const UserDetail = ({ user }) => {
   const { name, location, picture, email, gender, nat } = user
   const fullAddress = `${location.street.number}, ${location.street.name}, ${location.city}, ${location.state}, ${location.country}`
 
@@ -17,3 +17,5 @@ export default function UserDetail({ user }) {
     </div>
   )
 }
+
+export default UserDetail

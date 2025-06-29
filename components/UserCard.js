@@ -1,4 +1,4 @@
-export default function UserCard({ user, onClick }) {
+const UserCard = ({ user, onClick }) => {
   return (
     <div className="user-card" onClick={onClick}>
       <img src={user.picture.medium} alt="User" />
@@ -8,3 +8,5 @@ export default function UserCard({ user, onClick }) {
     </div>
   )
 }
+
+export default UserCard
