@@ -10,17 +10,21 @@ const HomePage = () => {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?inc=gender,name,nat,location,picture,email&results=20")
-      .then(res => res.json())
-      .then(data => {
-        setUsers(data.results)
-        setLoading(false)
-      })
-      .catch(() => {
-        setError(true)
-        setLoading(false)
-      })
-  }, [])
+  const fetchUsers = async () => {
+    try {
+      const response = await fetch("https://randomuser.me/api/?inc=gender,name,nat,location,picture,email&results=20")
+      const data = await response.json()
+      setUsers(data.results)
+    } catch (error) {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  fetchUsers()
+}, [])
+
 
   return (
     <main className="container">
